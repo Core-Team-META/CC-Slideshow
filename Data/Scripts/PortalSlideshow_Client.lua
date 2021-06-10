@@ -1,4 +1,39 @@
+--[[
+Copyright 2021 Manticore Games, Inc.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated
+documentation files (the "Software"), to deal in the Software without restriction, including without limitation the
+rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit
+persons to whom the Software is furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the
+Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+--]]
+
+------------------------------------------------------------------------------------------------------------------------
+-- Random Spinner Server
+-- Authors Divided (META) - (https://www.coregames.com/user/eaba4947069846dbb72fc5efb0f04f47)
+-- Date: 2021/5/20
+-- Version 0.0.1
+------------------------------------------------------------------------------------------------------------------------
+-- OBJECTS
+------------------------------------------------------------------------------------------------------------------------
+
 local ROOT = script:GetCustomProperty("TutorialUI"):WaitForObject()
+local SCREEN_GROUP = script:GetCustomProperty("ScreenGroup"):WaitForObject()
+local PIVOT = script:GetCustomProperty("Pivot"):WaitForObject()
+local UI_CONTAINER = script:GetCustomProperty("UIContainer"):WaitForObject()
+local LEFT_BUTTON = script:GetCustomProperty("LeftButton"):WaitForObject()
+local RIGHT_BUTTON = script:GetCustomProperty("RightButton"):WaitForObject()
+
+------------------------------------------------------------------------------------------------------------------------
+-- CUSTOM PROPERTIES
+------------------------------------------------------------------------------------------------------------------------
+
 local Enabled = ROOT:GetCustomProperty("Enabled")
 local MENU_TOGGLE_KEYBIND = ROOT:GetCustomProperty("ToggleUIKeybind") or "ability_extra_24"
 local LEFT_JUMP_KEYBIND = ROOT:GetCustomProperty("LeftJumpKeybind") or "ability_extra_48"
@@ -6,6 +41,10 @@ local RIGHT_JUMP_KEYBIND = ROOT:GetCustomProperty("RightJumpKeybind") or "abilit
 local NUMBER_OF_IMAGES = ROOT:GetCustomProperty("TotalImages") or 4
 local IMAGE_SPACING = ROOT:GetCustomProperty("ImageSpacing") or 1020
 local IMAGE_ZOOM = ROOT:GetCustomProperty("ImageZoom") or 25
+
+------------------------------------------------------------------------------------------------------------------------
+-- ERROR HANDLING
+------------------------------------------------------------------------------------------------------------------------
 
 if IMAGE_ZOOM < 5 then
     IMAGE_ZOOM = 5
@@ -21,13 +60,12 @@ if not Enabled then
     return
 end
 
-local SCREEN_GROUP = script:GetCustomProperty("ScreenGroup"):WaitForObject()
-local PIVOT = script:GetCustomProperty("Pivot"):WaitForObject()
-local UI_CONTAINER = script:GetCustomProperty("UIContainer"):WaitForObject()
-local LEFT_BUTTON = script:GetCustomProperty("LeftButton"):WaitForObject()
-local RIGHT_BUTTON = script:GetCustomProperty("RightButton"):WaitForObject()
 
 local lastMenu
+
+------------------------------------------------------------------------------------------------------------------------
+-- GLOBAL FUNCTIONS
+------------------------------------------------------------------------------------------------------------------------
 
 function GetArrowProperties(button)
     return {

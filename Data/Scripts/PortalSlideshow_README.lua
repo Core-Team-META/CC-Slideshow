@@ -32,8 +32,8 @@
     Adding Images
     =============
 
-   1. To add images to your slideshow, you first must upload the images to a live Core Game. The game can be a blank
-   unlisted project, to better organize your images. When publishing the game, simply add your images as screenshots.
+    1. To add images to your slideshow, you first must upload the images to a live Core Game. The game can be a blank
+    unlisted project, to better organize your images. When publishing the game, simply add your images as screenshots.
 
     2. Once published, save the link somewhere it's easily accessible on your computer.
 

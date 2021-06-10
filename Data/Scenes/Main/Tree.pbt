@@ -19,7 +19,8 @@ Objects {
   ChildIds: 14713340454944924967
   ChildIds: 10005074784157121906
   ChildIds: 14982843161775482339
-  ChildIds: 17658458363607177765
+  ChildIds: 32263417950022323
+  ChildIds: 15148533140267673888
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -35,8 +36,48 @@ Objects {
   }
 }
 Objects {
-  Id: 17658458363607177765
+  Id: 15148533140267673888
   Name: "Portal-Slideshow"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 15743755578011755728
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Portal-Slideshow"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -8791.50586
+            Y: 272059.75
+            Z: 7539.61084
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 14051496359547564965
+    }
+  }
+}
+Objects {
+  Id: 32263417950022323
+  Name: "PortalSlideshow_README"
   Transform {
     Location {
       X: -8791.50586
@@ -61,9 +102,13 @@ Objects {
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "Tutorial"
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 7568307118361539636
+    }
   }
 }
 Objects {
