@@ -68,6 +68,11 @@ Objects {
             Z: 7539.61084
           }
         }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
       }
     }
     TemplateAsset {

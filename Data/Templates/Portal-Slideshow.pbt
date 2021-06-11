@@ -72,11 +72,11 @@ Assets {
           }
           Overrides {
             Name: "cs:ImageSpacing"
-            Float: 1000
+            Float: 1200
           }
           Overrides {
             Name: "cs:ImageZoom"
-            Float: 0
+            Float: 5
           }
           Overrides {
             Name: "cs:Enabled:tooltip"
@@ -2756,4 +2756,5 @@ Assets {
     }
   }
   SerializationVersion: 87
+  DirectlyPublished: true
 }
