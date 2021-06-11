@@ -1,16 +1,16 @@
 # META-CC-Slideshow
- Meta Portal Slideshow - README
+ ## Meta Portal Slideshow - README
     v0.1.0 - 2021/5/27
     Developed by: Divided (META) (https://www.coregames.com/user/eaba4947069846dbb72fc5efb0f04f47)
     Modified by: Morticai (META) (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
     This package is a work in progress.
-       Description:
+## Description:
     Meta Portal Slideshow is a simple component that allows creators to upload custom images that can
     be used in their game to provide information to players, such as how to play, game updates, and item
     showcasing. 
     
     
-    Setup
+## Setup
     =====
     1. To begin adjusting how the Portal Slideshow system first selects the SlideshowSettings Client Context.
     2. Once selected you'll see several options available to you:
@@ -23,7 +23,7 @@
         Increasing this to say 1200 will add a slight gap between each image in the slide show.
         7) ImageZoom - Increasing this number will make the images further from the players screen. Setting this to 5 will
         make the image fullscreen.
-    Adding Images
+## Adding Images
     =============
     1. To add images to your slideshow, you first must upload the images to a live Core Game. The game can be a blank
     unlisted project, to better organize your images. When publishing the game, simply add your images as screenshots.
